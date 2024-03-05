@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в систему учета финансов</h1>
+    </header>
+    <h2>Выберете действие из меню</h2>
+    <ol>
+        <li>Добавить запись</li>
+        <li>Просмотреть все записи за период</li>
+        <li>Просмотреть общую сумму расходов и доходов за период</li>
+        <li>Просмотреть статистику по категориям за период</li>
+        <li>Удалить запись</li>
+    </ol>
+
+    <label>
+        <input id = 'inputUser' type="text" placeholder="Введите значение">
+    </label>
+    <button onclick="oneMenu()">Добавить</button>
+
+    <div class="one" id = 'one'>
+        <div>Введите тип записи (расходы/доходы):</div>
+        <input id = 'noMone' type="text">
+
+        <div>Введите сумму:</div>
+        <input id = 'Money' type="text">
+
+        <div>Введите категорию:</div>
+        <input id = 'category' type="text">
+
+        <div>Введите дату (ГГГГ-ММ-ДД):</div>
+        <input id = 'time' type="text">
+        <button onclick="addIncome()">Добавить</button>
+    </div>
+    <div  class = 'one'>
+        <div>Укажите от какой даты</div>
+        <input class="startData" type="text" placeholder="гггг-мм-дд">
+        <div>До какой даты</div>
+        <input class="endData" type="text" placeholder="гггг-мм-дд">
+        <button onclick="findData(dataUser1)">Поиск</button>
+        <ol id="olPeriod">
+        </ol>
+    </div>
+    <div id="exp" class="one">
+        <div id="expenses">
+            <h2>Расходы</h2>
+        </div>
+        <br>
+        <div id="income">
+            <h2>Доходы</h2>
+        </div>
+    </div>
+    <div id="period" class = 'one'>
+        <div>Укажите от какой даты</div>
+        <input class="startData" type="text" placeholder="гггг-мм-дд">
+        <div>До какой даты</div>
+        <input class="endData" type="text" placeholder="гггг-мм-дд">
+        <button onclick="findDataAndCalculate()">Поиск</button>
+        <ol id="olPeriod2">
+        </ol>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
